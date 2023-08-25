@@ -1,5 +1,5 @@
 -- ORIGINAL BY:sashaa#5351.
---i just tlanslate to russian 
+--i just tlanslate to ~russian~ Ukrainian
 
 
 
@@ -47,9 +47,9 @@ Title.Position = UDim2.new(0.0272108838, 0, 0, 0)
 Title.Size = UDim2.new(0, 255, 0, 31)
 Title.ZIndex = 3
 Title.Font = Enum.Font.RobotoMono
-Title.Text = "PlotCopy v2 [RU]| sashaa#5351"
+Title.Text = "PlotCopy v2 [UA]|sashaa#5351"
 Title.TextColor3 = Color3.fromRGB(255, 131, 43)
-Title.TextSize = 22.000
+Title.TextSize = 19.000
 Title.TextStrokeTransparency = 0.000
 Title.TextWrapped = true
 
@@ -87,7 +87,7 @@ LoadPlot.Position = UDim2.new(0.15646258, 0, 0.256465495, 0)
 LoadPlot.Size = UDim2.new(0, 200, 0, 50)
 LoadPlot.ZIndex = 3
 LoadPlot.Font = Enum.Font.RobotoMono
-LoadPlot.Text = "Загрузить плот"
+LoadPlot.Text = "Побудувати плот"
 LoadPlot.TextColor3 = Color3.fromRGB(255, 189, 35)
 LoadPlot.TextSize = 27.000
 
@@ -159,10 +159,10 @@ TextLabel.BackgroundTransparency = 1.000
 TextLabel.Position = UDim2.new(0.15646258, 0, 0.821120679, 0)
 TextLabel.Size = UDim2.new(0, 200, 0, 50)
 TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Перед загрузкой плота убедитесь, что у вас загружен плот график и в руках btools."
+TextLabel.Text = "Увага! перед тим, як скопіювати будівлю, перевітрте, чи у вас пустий плот, чи ні, і також тримайти F3X в руках. (Переклав leoverem12.)"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
+TextLabel.TextSize = 10.000
 TextLabel.TextWrapped = true
 
 -- Scripts:
@@ -251,7 +251,7 @@ local Notify = function(title, text)
     })
 end
 
--- -- ty SnowyShiro !!!!!!!!!!!
+-- -- ty SnowyShiro !!!!!!!!!!! (дякую SnowyShiro !!!!!!!!!!!)
 -- local saveinstance,SaveInstance=getgenv().saveinstance;
 -- local bo=getupvalue(saveinstance,2)SaveInstance=bo.Save;
 -- if not getupvalue(saveinstance,1)then bo.Init(getupvalue(saveinstance,3))setupvalue(saveinstance,1,true)end;
@@ -511,7 +511,7 @@ end
 local Building = false
 
 local function BuildPlot(Folder,CFrame)
-    Notify("Загрузка","Загрузка плота...")
+    Notify("Зачекайте!","Завантаження плота...")
 
     Folder = Folder:Clone()
 
@@ -562,11 +562,11 @@ local function BuildPlot(Folder,CFrame)
     --     end
     -- end)
 
-    Notify("Загружен","Плот загружен!")
+    Notify("Плот","Плот успішно завантажено!")
 
     task.wait(1)
 
-    Notify("Начинаем строить плот...","Строим плот!!")
+    Notify("Починаемо будувати плот...","Зачекайте.")
 
     for i,v in ipairs(FolderTable) do
         --if n % 2 == 0 then
@@ -605,7 +605,7 @@ local function BuildPlot(Folder,CFrame)
         end)
     end
 
-    Notify("Готово","Плот построен успешно!")
+    Notify("Готово","Плот побудований успішно!")
 
     Building = false
 end
@@ -630,7 +630,7 @@ Username:GetPropertyChangedSignal("Text"):Connect(function()
         for i,plr in pairs(game.Players:GetChildren()) do
             if plr.Name:lower():match(Username.Text:lower()) then
                 CurrentSelection = plr.Name .. "BuildArea"
-                CurrentPlot.Text = "Plot found! | " .. CurrentSelection
+                CurrentPlot.Text = "Знайдений плот! | " .. CurrentSelection
             end
         end
     end
